@@ -12,7 +12,7 @@ def get_user_from_token(token):
 
     if response.status_code == 200:
         return response.json()
-    elif response.status_code = 401:
+    elif response.status_code == 401:
         raiseException('invalid or expired token')
     else:
         raise Exception(f"Failed to connect to User Management Service: {response.status_code}")
